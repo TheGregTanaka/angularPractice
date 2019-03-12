@@ -1,0 +1,6 @@
+{
+  "files.autoSave": "afterDelay",
+  "html.format.wrapAttributes": "force-aligned",
+  "editor.insertSpaces": false,
+  "editor.detectIndentation": false
+}
