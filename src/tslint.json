@@ -12,6 +12,13 @@
             "element",
             "pm",
             "kebab-case"
-        ]
+        ],
+		"indent": [
+			true,
+			"tabs"
+		],
+		"no-inferrable-types": [
+			false
+		]
     }
 }
