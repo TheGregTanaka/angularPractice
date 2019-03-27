@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'pm-root',
@@ -6,8 +7,8 @@ import { Component } from '@angular/core';
     <nav class='navbar navbar-expand navbar-light bg-light'>
       <a class='navbar-brand'>{{pageTitle}}</a>
       <ul class='nav nav-pills'>
-        <li><a class='nav-link' [router-link]="['/welcome']">Home</a></li>
-        <li><a class='nav-link' [router-link]="['/products']">Product List</a></li>
+        <li><a class='nav-link' [routerLink]="['/welcome']">Home</a></li>
+        <li><a class='nav-link' [routerLink]="['/products']">Product List</a></li>
       </ul>
     </nav>
     <div class='container'>
