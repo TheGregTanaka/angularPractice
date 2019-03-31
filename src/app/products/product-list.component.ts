@@ -23,31 +23,32 @@ export class ProductListComponent implements OnInit {
   }
 
   filteredProducts: IProduct[];
-  products: IProduct[] = [
-  ];
+  products: IProduct[] = [];
 
-  constructor(private productService: ProductService) {
-  }
+  constructor(private productService: ProductService) {}
 
   onRatingClicked(message: string): void {
     this.pageTitle = 'Product List: ' + message;
   }
+
   performFilter(filterBy: string): IProduct[] {
     filterBy = filterBy.toLocaleLowerCase();
     return this.products.filter((product: IProduct) =>
       product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1);
   }
+
   toggleImage(): void {
     this.showImage = !this.showImage;
   }
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe(
-        products => {
-          this.products = products;
-          this.filteredProducts = this.products;
-        },
-        error => this.errorMessage = <any>error
+      products => {
+        this.products = products;
+        this.filteredProducts = this.products;
+      },
+      error => this.errorMessage = <any>error
     );
   }
 }
+

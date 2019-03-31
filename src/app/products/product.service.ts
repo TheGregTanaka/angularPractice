@@ -25,7 +25,7 @@ export class ProductService {
       let errorMessage = '';
       if (err.error instanceof ErrorEvent) {
           // client side network error
-          errorMessage = `And error occurred: ${err.error.message}`;
+          errorMessage = `An error occurred: ${err.error.message}`;
       } else {
           // backend returned unsuccessful code
           // body may contain clues
